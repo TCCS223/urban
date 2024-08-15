@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="arquitetura-_1_.ico" type="image/x-icon">
+    <title>Urban - Página principal</title>
+
+    <style type="text/css">
+        nav {
+            width: 100%;
+            height: 75px;
+            background-color: #181818;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+            justify-content: space-between;
+        }
+
+        .button {
+            background-color: transparent;
+            color: #ffff;
+            border-color: transparent;
+            justify-content: end;
+            /* justify-content: space-between; */
+            margin-right: 2%;
+            font-family: Verdana, Tahoma, sans-serif;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            color: #d90f;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 7px;
+            align-items: center;
+        }
+
+        .img {
+            height: 55px;
+            margin-left: 9%;
+            animation: fadeInAnimation ease 8s infinite;
+            background-repeat: repeat;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0.3;
+            }
+
+            /* 25%{
+                opacity: 1;
+            } */
+
+            50% {
+                opacity: 1;
+            }
+
+            /* 75%{
+                opacity: 1;
+            } */
+
+            100% {
+                opacity: 0.3;
+            }
+        }
+
+        body {
+            background-image: url("bela-foto-do-crepusculo-em-nova-york\ \(1\).jpg");
+            overflow-x: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+        }
+
+        h1 {
+            margin-top: 13%;
+            margin-bottom: 1%;
+            margin-left: 23.5%;
+            font-size: 50px;
+            color: aliceblue;
+        }
+
+        h2 {
+            margin-left: 27%;
+            margin-bottom: 1px;
+            font-size: 30px;
+            margin-block-start: 1%;
+            /* margin-inline-end: 10%;*/
+            color: aliceblue;
+        }
+
+        .text-box a {
+            display: flex;
+            text-decoration: none;
+            text-align: center;
+            color: #ffff;
+            background: #d90f;
+            /* padding: 20px 45px; */
+            width: 250px;
+            height: 55px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 39%;
+            margin-top: 45px;
+            justify-content: center;
+            /* align-content: center; */
+            align-items: center;
+            font-family: Verdana, Tahoma, sans-serif;
+            position: relative;
+        }
+
+
+        .fade {
+            opacity: 0.88;
+        }
+
+        .fade:hover {
+            opacity: 1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            /* padding: 50px 0px; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .parent {
+            height: 400px;
+            width: 300px;
+            padding-left: 20px;
+            perspective: 1000px;
+            justify-content: space-between;
+
+        }
+
+        .card {
+            padding-top: 100px;
+            transform-style: preserve-3d;
+            background-image: url("orange-galaxy.jpg");
+            background-position: center center;
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            background-position: 80% 20%;
+            /* transform: scale(1.1); */
+        }
+
+        .content-box {
+            height: 100%;
+            width: 100%;
+            background-color: #3B3B3B;
+            border-radius: 0px 0px 10px 10px;
+            box-shadow: rgba(184, 184, 183, 0.925) 0px 20px 50px -25px;
+            /* transition: all 0.5s ease-in-out; */
+            padding: 60px 25px 25px 25px;
+            /* transform-style: preserve-3d; */
+        }
+
+        .content-box .card-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            margin-left: 0%;
+            margin-top: 0px;
+            /* transition: all 0.5s ease-in-out; */
+            /* transform: translate3d(0px, 0px, 20px); */
+        }
+
+        .content-box .card-title:hover {
+            transform: translate3d(0px, 0px, 50px);
+        }
+
+        .content-box .card-content {
+            padding-top: 15px;
+            font-size: 14px;
+            color: #b9b9b9;
+            margin-bottom: 40px;
+            
+        }
+        .content-box .but {
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: transparent;
+            width: 100px;
+            height: 30px;
+            border: solid 3px #c66300;
+            border-radius: 40px;
+            font-size: 11px;
+            font-weight: 900;
+            margin-right: 100px;
+            transition: .6s
+        }
+
+        .content-box .but:hover {
+            background-color: #c66300;
+            transform: scale(1.2);
+        }
+
+        .date-box {
+            position: absolute;
+            top: 75px;
+            left: 25px;
+            height: 60px;
+            width: 60px;
+            background-color: #c66300;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: rgb(99, 99, 100) 0px 20px 60px 0px, #313030 0px 18px 36px -18px;
+            /* transform: translate3d(0px, 0px, 50px); */
+        }
+
+        .date-box span {
+            display: block;
+            text-align: center;
+        }
+
+        .date-box .month {
+            color: rgb(230, 230, 230);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .date-box .date {
+            font-size: 20px;
+            font-weight: 900;
+            color: rgb(239, 239, 239);
+        }
+
+        .classiconecard{
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .title {
+            justify-content: center;
+            
+            margin-top: auto;
+            margin-bottom: 25px;
+            font-size: 45px;
+            margin-left: 2%;
+            width: 100%;
+            color: #fff; 
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        #link-topo{
+            text-decoration: none;
+            color: #fff;
+            background-color: #d90f;
+            padding: 10px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            box-shadow: 3px 3px 3px #333;
+            border-radius: 50%;
+        }
+       
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+        .color-orange{
+            height: 500px;
+            width: 100%;
+            background-color: #c66300;
+            margin: 0;
+            display: block;
+            position: absolute;
+            justify-content: center;
+        }
+
+        .one{
+            width: 100vw;
+            height: 1000px;
+            background-color: #383838;
+            display: block;
+            align-items: center;
+            overflow: hidden;
+            position: absolute;
+            
+        }
+
+        .title-color-orange{
+            height: auto;
+            width: 100%;
+            font-family: sans-serif;
+            justify-content: center;
+            text-align: center;
+            font-size: 75px;
+            
+        }
+
+        .subtitle-color-orange{
+            height: auto;
+            width: 100%;
+            font-family: sans-serif;
+            justify-content: center;
+            text-align: center;
+            font-size: 40px;
+            
+        }
+
+
+        .text-color-orange{
+            height: auto;
+            width: 100%;
+            font-family: sans-serif;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        
+        .text{
+            width: 80%;
+            height: auto;
+            margin: auto;
+            margin-top: 70px;
+            
+        }
+
+        .giant-card{
+            height: 650px;
+            width: 1000px;
+            border: solid 7px #383838;
+            border-radius: 2em;
+            background-color: #7b7a7a;
+            position: relative;
+            margin: 0 auto;
+            top: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collum{
+            width: 33%;
+            height: 100%;
+            background-color: transparent;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .icon-value{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #c66300;
+
+        }
+
+    </style>
+
+    
+</head>
+
+<body>
+    
+    <header>
+        <div>
+            <nav>
+                <div>
+                    <img src="logo4.png" alt="logo" class="img">
+                </div>
+                <div class="button">
+
+                    <ul>
+                        <li><a href="https://www.google.com" target="_blank" rel="next"><button
+                        class="button">INICIO</button></a></li>
+                        <li><a href="sobre2.html"><button class="button">SOBRE</button></a></li>
+                        <li><a href="#"><button class="button">SERVIÇOS</button></a></li>
+                        <li><a href="#"><button class="button">SOCIAL</button></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">CONSTRUA SEU FUTURO</h1>
+        <h2
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            Melhores ideias, soluções e resultados</h2>
+
+        <div class="text-box fade">
+            <a href="">V E J A ‎ ‎ ‎ ‎ M A I S</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">
+            <h1>CONHEÇA NOSSOS IDEAIS</a>
+        </div>
+        <div class="parent">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Modernidade</h1>
+                    <p class="card-content">
+                        Transforme seu espaço interno com a modernidade que ele merece. Descubra novas possibilidades de
+                        design e conforto.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                    <img src="forma-abstrata.png" class="classiconecard">
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card2">
+            <div class="card ">
+                <div class="content-box">
+                    <h1 class="card-title">Inovação</h1>
+                    <p class="card-content">
+                        Revitalize seu espaço interno com opções modernas e inovadoras para um ambiente mais inteligente
+                        e estimulante.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                    <img src="foguete (1).png" class="classiconecard">
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card3">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Conforto</h1>
+                    <p class="card-content">
+                        Encontre o conforto que você merece, transformando seu ambiente interno em um refúgio acolhedor.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                    <img src="confort.png" class="classiconecard">
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card4">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Elegância</h1>
+                    <p class="card-content">
+                        Crie um ambiente interno que seja a expressão máxima da elegância, onde cada elemento é uma
+                        obra-prima.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                   <img src="flor-de-lotus (1).png" class="classiconecard">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one">
+        <div class="color-orange">
+            <div class="text">
+                <div class="title-color-orange">Sejam bem-vindos à URBAN</div>
+                <div class="subtitle-color-orange">a vanguarda da arquitetura e urbanismo</div>    
+                <div class="text-color-orange">URBAN é uma empresa de arquitetura e urbanismo que se destaca pela inovação e modernidade. Com uma equipe confiante e curiosa, estamos sempre aprendendo e crescendo. Nosso objetivo é criar espaços funcionais, inspiradores e ecologicamente responsáveis. Estamos ansiosos para colaborar com você e dar vida às suas ideias. Seja bem-vindo à URBAN.</div>
+            </div>    
+        </div>
+
+        <div class="giant-card">
+            <div class=collum>
+                <div class="icon-value"></div>
+            </div>
+            <hr width="1px" size="552px" color="#fff" >
+            <div class="collum"></div>
+            <hr width="1px" size="552px" color="#fff" >
+            <div class="collum"></div>
+        </div>
+    </div>
+
+
+    
+      <!-- NÃO APAGAR O COMANDO ABAIXO -->
+    <!-- <a id="link-topo" href="#">&#9650;</a> -->
+</body>
+</html>

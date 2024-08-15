@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="arquitetura-_1_.ico" type="image/x-icon">
+    <title>Urban - Página principal</title>
+
+    <style type="text/css">
+        nav {
+            width: 100%;
+            height: 75px;
+            background-color: rgb(24, 24, 24);
+            display: flex;
+            align-items: center;
+            z-index: 100;
+            justify-content: space-between;
+        }
+
+        .button {
+            background-color: transparent;
+            color: #ffff;
+            border-color: transparent;
+            justify-content: end;
+            /* justify-content: space-between; */
+            margin-right: 2%;
+            font-family: Verdana, Tahoma, sans-serif;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            color: #d90f;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 7px;
+            align-items: center;
+        }
+
+        .img {
+            height: 55px;
+            margin-left: 9%;
+            animation: fadeInAnimation ease 8s infinite;
+            background-repeat: repeat;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0.3;
+            }
+
+            /* 25%{
+                opacity: 1;
+            } */
+
+            50% {
+                opacity: 1;
+            }
+
+            /* 75%{
+                opacity: 1;
+            } */
+
+            100% {
+                opacity: 0.3;
+            }
+        }
+
+        body {
+            background-image: url("bela-foto-do-crepusculo-em-nova-york\ \(1\).jpg");
+            /* overflow: hidden; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+        }
+
+        h1 {
+            margin-top: 13%;
+            margin-bottom: 1%;
+            margin-left: 23.5%;
+            font-size: 50px;
+            color: aliceblue;
+        }
+
+        h2 {
+            margin-left: 27%;
+            margin-bottom: 1px;
+            font-size: 30px;
+            margin-block-start: 1%;
+            /* margin-inline-end: 10%;*/
+            color: aliceblue;
+        }
+
+        .text-box a {
+            display: flex;
+            text-decoration: none;
+            text-align: center;
+            color: #ffff;
+            background: #d90f;
+            /* padding: 20px 45px; */
+            width: 250px;
+            height: 55px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 41%;
+            margin-top: 45px;
+            justify-content: center;
+            /* align-content: center; */
+            align-items: center;
+            font-family: Verdana, Tahoma, sans-serif;
+            position: relative;
+        }
+
+
+        .fade {
+            opacity: 0.88;
+        }
+
+        .fade:hover {
+            opacity: 1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            /* padding: 50px 0px; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .parent {
+            height: 400px;
+            width: 300px;
+            padding-left: 20px;
+            perspective: 1000px;
+            justify-content: space-between;
+
+        }
+
+        .card {
+            padding-top: 100px;
+            transform-style: preserve-3d;
+            background-image: url("https://img.wallpapic.com/i1862-037-811/medium/space-purple-blue-astronomy-wallpaper.jpg");
+            background-position: center center;
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            background-position: 80% 20%;
+            transform: scale(1.1);
+        }
+
+        .content-box {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.811);
+            border-radius: 0px 0px 10px 10px;
+            box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+            /* transition: all 0.5s ease-in-out; */
+            padding: 60px 25px 25px 25px;
+            /* transform-style: preserve-3d; */
+        }
+
+        .content-box .card-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            margin-left: 0%;
+            margin-top: 0px;
+            /* transition: all 0.5s ease-in-out; */
+            /* transform: translate3d(0px, 0px, 20px); */
+        }
+
+        .content-box .card-title:hover {
+            transform: translate3d(0px, 0px, 50px);
+        }
+
+        .content-box .card-content {
+            padding-top: 15px;
+            font-size: 14px;
+            color: #b9b9b9;
+            margin-bottom: 40px;
+            /* transition: all 0.5s ease-in-out; */
+            /* transform: translate3d(0px, 0px, 20px); */
+        }
+
+        /* .content-box .card-content:hover {
+            /* transform: translate3d(0px, 0px, 50px);} */
+
+
+        /* .content-box .see-more {
+            display: flex;
+            font-weight: 900;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #08f;
+            /* padding-top: 15px; */
+        /* transition: all 0.5s ease-in-out; */
+        /* transform: translate3d(0px, 0px, 20px); *} */
+
+        .content-box .but {
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: transparent;
+            width: 100px;
+            height: 30px;
+            border: solid 3px #08f;
+            border-radius: 40px;
+            font-size: 11px;
+            font-weight: 900;
+            margin-right: 100px;
+            transition: .6s
+        }
+
+        .content-box .but:hover {
+            /* border-color: */
+            background-color: #08f;
+            transform: scale(1.2);
+        }
+
+        .date-box {
+            position: absolute;
+            top: 75px;
+            left: 25px;
+            height: 60px;
+            width: 60px;
+            background-color: #000;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: #06f 0px 20px 60px 0px, #00c8ff 0px 18px 36px -18px;
+            /* transform: translate3d(0px, 0px, 50px); */
+        }
+
+        .date-box span {
+            display: block;
+            text-align: center;
+        }
+
+        .date-box .month {
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .date-box .date {
+            font-size: 20px;
+            font-weight: 900;
+            color: #08f;
+        }
+
+       
+        .card2 {
+            filter: hue-rotate(150deg);
+        }
+
+        .card3 {
+            filter: hue-rotate(300deg);
+        }
+
+        .card4 {
+            filter: hue-rotate(90deg);
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .title {
+            justify-content: center;
+            position: relative;
+            margin-top: auto;
+            margin-bottom: 25px;
+            font-size: 50px;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        #link-topo{
+            text-decoration: none;
+            color: #fff;
+            background-color: #d90f;
+            padding: 10px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            box-shadow: 3px 3px 3px #333;
+            border-radius: 50%;
+        }
+       
+    </style>
+
+    
+</head>
+
+<body>
+    
+    <header>
+        <div>
+            <nav>
+                <div>
+                    <img src="logo4.png" alt="logo" class="img">
+                </div>
+                <div class="button">
+
+                    <ul>
+                        <li><a href="https://www.google.com" target="_blank" rel="next"><button
+                        class="button">INICIO</button></a></li>
+                        <li><a href="sobre2.html"><button class="button">SOBRE</button></a></li>
+                        <li><a href="#"><button class="button">SERVIÇOS</button></a></li>
+                        <li><a href="#"><button class="button">SOCIAL</button></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">CONSTRUA SEU FUTURO</h1>
+        <h2
+            style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            Melhores ideias, soluções e resultados</h2>
+
+        <div class="text-box fade">
+            <a href="#ideais">V E J A ‎ ‎ ‎ ‎ M A I S</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">
+            <a name="ideais">CONHEÇA NOSSOS IDEAIS</a>
+        </div>
+        <div class="parent">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Modernidade</h1>
+                    <p class="card-content">
+                        Transforme seu espaço interno com a modernidade que ele merece. Descubra novas possibilidades de
+                        design e conforto.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                    <span class="month">JUNE</span>
+                    <span class="date">29</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card2">
+            <div class="card ">
+                <div class="content-box">
+                    <h1 class="card-title">Inovação</h1>
+                    <p class="card-content">
+                        Revitalize seu espaço interno com opções modernas e inovadoras para um ambiente mais inteligente
+                        e estimulante.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                    <span class="month">JUNE</span>
+                    <span class="date">29</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card3">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Conforto</h1>
+                    <p class="card-content">
+                        Encontre o conforto que você merece, transformando seu ambiente interno em um refúgio acolhedor.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                    <span class="month">JUNE</span>
+                    <span class="date">29</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card4">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Elegância</h1>
+                    <p class="card-content">
+                        Crie um ambiente interno que seja a expressão máxima da elegância, onde cada elemento é uma
+                        obra-prima.
+                    </p>
+                    <a href=""></a><button class="but">See More</button>
+                </div>
+                <div class="date-box">
+                    <span class="month">JUNE</span>
+                    <span class="date">29</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    
+      <!-- NÃO APAGAR O COMANDO ABAIXO -->
+    <!-- <a id="link-topo" href="#">&#9650;</a> -->
+</body>
+</html>
